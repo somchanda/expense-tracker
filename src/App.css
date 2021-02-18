@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
+* {
+    box-sizing: border-box;
+}
+body{
+    background-color: #e2e2e27f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2 {
+    text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+    margin: 30px auto;
+    width: 350px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.container .balance h4 {
+    text-transform: uppercase;
 }
 
-.App-link {
-  color: #61dafb;
+.container .income-expense {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffff;
+    padding: 5px;
+    box-shadow:6px 3px 9px 0px rgba(0, 0, 0, 0.41);
+}
+.container .income-expense .line{
+    border-left: 1px solid #5c5c5c7f;
+    height: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container .income-expense div:not(.line){
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.income{
+    color: #19a119;
+}
+
+.expense {
+    color: red;
+}
+
+.title {
+    margin-top: 40px;
+}
+
+hr {
+    color: rgba(0, 0, 0, 0.267);
+}
+
+.history-card-negative {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffff;
+    padding: 10px;
+    margin-bottom: 8px;
+    box-shadow:6px 3px 9px 0px rgba(0, 0, 0, 0.41);
+    border-right: 4px solid red;
+}
+
+.history-card-positive {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffff;
+    padding: 10px;
+    margin-bottom: 8px;
+    box-shadow:6px 3px 9px 0px rgba(0, 0, 0, 0.41);
+    border-right: 4px solid #19a119;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #6567b1;
+    font-size: 18px;
+    color: white;
+}
+
+/*
+Responsive design
+*/
+
+@media screen and (max-width: 350px) {
+    .container {
+        width: 200px;
+    }
 }
