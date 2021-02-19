@@ -60,7 +60,7 @@ hr {
     color: rgba(0, 0, 0, 0.267);
 }
 
-.history-card-negative {
+/* .history-card-negative {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -69,16 +69,34 @@ hr {
     margin-bottom: 8px;
     box-shadow:6px 3px 9px 0px rgba(0, 0, 0, 0.41);
     border-right: 4px solid red;
+} */
+
+.history-card {
+    padding: 0;
+    list-style-type: none;
 }
 
-.history-card-positive {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.history-card li {
+    position: relative;
     background-color: #ffff;
-    padding: 10px;
     margin-bottom: 8px;
+    padding: 10px;
     box-shadow:6px 3px 9px 0px rgba(0, 0, 0, 0.41);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 2s;
+}
+
+.history-card li:hover .delete-btn {
+    display: block;
+}
+
+.minus {
+    border-right: 5px solid red;
+}
+
+.plus {
     border-right: 4px solid #19a119;
 }
 
@@ -97,6 +115,19 @@ input[type=submit] {
     background-color: #6567b1;
     font-size: 18px;
     color: white;
+}
+
+.delete-btn {
+    background-color: red;
+    box-shadow:6px 3px 9px 0px rgba(0, 0, 0, 0.41);
+    color: white;
+    border: none;
+    border-radius: 10%;
+    position: absolute; 
+    left: -18px;
+    display: none;
+    padding: 5px;
+    cursor: pointer;
 }
 
 /*
