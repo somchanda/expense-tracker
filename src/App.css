@@ -100,7 +100,7 @@ hr {
     border-right: 4px solid #19a119;
 }
 
-input[type=text] {
+input[type=text], [type=number] {
     width: 100%;
     padding: 12px 20px;
     border: 1px solid #ccc;
